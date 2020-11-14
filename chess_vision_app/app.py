@@ -1,5 +1,6 @@
 import PySimpleGUI as sg
 from screens.main_screen import main_screen
+from screens.training_screen import training_screen
 
 
 layout = main_screen()
