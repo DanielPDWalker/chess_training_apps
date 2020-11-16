@@ -14,3 +14,5 @@ while app_running:
     if event == "Start":
         layout = training_screen()
         window = sg.Window("Chess Vision Training App", layout)
+        #training_question_count = 0
+        # while training_question_count < 20:
