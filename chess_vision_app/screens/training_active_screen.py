@@ -4,8 +4,8 @@ import random as r
 from squares_data import all_squares_list
 
 
-def training_screen():
-    chosen_square = training_screen_new_question()
+def training_active_screen():
+    chosen_square = training_active_screen_new_question()
 
     training_screen_layout = [
         [sg.Text(chosen_square, justification="center",
@@ -22,5 +22,5 @@ def training_screen():
     return training_screen_layout, chosen_square
 
 
-def training_screen_new_question():
+def training_active_screen_new_question():
     return r.choice(all_squares_list)

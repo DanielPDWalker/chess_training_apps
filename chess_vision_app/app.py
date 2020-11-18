@@ -2,7 +2,7 @@ import PySimpleGUI as sg
 
 
 from screens.main_screen import main_screen
-from screens.training_active_screen import training_screen, training_screen_new_question
+from screens.training_active_screen import training_active_screen, training_active_screen_new_question
 from squares_data import dark, light
 
 
@@ -16,7 +16,7 @@ while app_running:
         break
     if event == "Start":
         window.close()
-        layout, chosen_square = training_screen()
+        layout, chosen_square = training_active_screen()
         window = sg.Window("Chess Vision Training App", layout, finalize=True)
 
         training_question_count = 0
@@ -37,7 +37,7 @@ while app_running:
             else:
                 incorrect += 1
             training_question_count += 1
-            chosen_square = training_screen_new_question()
+            chosen_square = training_active_screen_new_question()
             window['q'].update(value=chosen_square)
             event, values = window.read()
         else:
