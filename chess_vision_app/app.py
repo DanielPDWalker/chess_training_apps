@@ -15,7 +15,7 @@ while app_running:
     event, values = window.read()
     if event == "Close" or event == sg.WIN_CLOSED:
         break
-    if event == "Start" or "Re-Start":
+    if event == "Start":
         window.close()
         layout, chosen_square = training_active_screen()
         window = sg.Window("Chess Vision Training App", layout, finalize=True)
